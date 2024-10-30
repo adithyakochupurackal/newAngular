@@ -1,0 +1,11 @@
+.text{
+    text-align: center;
+}
+
+.appTitle{
+    font-size: large;
+}
+
+#container{
+    display: flex;
+}

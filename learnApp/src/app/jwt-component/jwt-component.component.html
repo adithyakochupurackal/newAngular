@@ -1,0 +1,8 @@
+jwt-component.component.html
+<form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="userName" name="userName" placeholder="Username" required>
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+    <input type="text" [(ngModel)]="role" name="role" placeholder="Role" required>
+    <button type="submit">login</button>
+  </form>
+  

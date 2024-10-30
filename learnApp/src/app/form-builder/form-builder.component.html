@@ -1,0 +1,55 @@
+<h3>
+    Create a Product - FormBuilder<br><br>
+</h3>
+
+<div class = "groupForms">
+    <form [formGroup] = "productForm" (ngSubmit)  = "onSubmit()">
+        
+        <label for ="">
+            Product Id &nbsp;&nbsp;&nbsp;
+            <input type = "text" style = "text-align: center;" formControlName = "prodId"/>
+        </label><br><br>
+
+        <label  for="">
+            Brand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "text" style = "text-align: center;" formControlName = "brand"/>
+        </label><br><br>
+
+        <div formGroupName = 'desc'>
+            <label  for="">
+                Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type = "text" style = "text-align: center;" formControlName = "age"/>
+            </label><br><br>
+
+            <label  for="">
+                Seasons  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type = "text" style = "text-align: center;" formControlName = "seasons"/>
+            </label>
+        </div><br>
+
+        <label  for="qty">
+            Quantity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "text" style = "text-align: center;" formControlName = "qty"/>
+        </label><br><br>
+
+        <label  for="">
+            Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type = "text" style = "text-align: center;" formControlName = "price"/>
+        </label><br><br>
+
+        <div formArrayName = "suppliers">
+
+            <label for ="">Suppliers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <button (click) = "addNewSupplier()">Add New Supplier </button><br><br>
+
+            <div *ngFor="let supplier of  suppliers.controls; let i = index" >
+                <label for = "">
+                    Supplier &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type = "text" style = "text-align: center;" [formControlName] = "i" /> 
+                </label>
+            </div>
+        </div><br>
+
+        <button type = "submit" class = "sButton" [disabled]="!productForm.valid">Submit</button>
+    </form>
+</div>

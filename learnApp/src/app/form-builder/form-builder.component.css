@@ -1,0 +1,19 @@
+.sButton{
+    height: 35px;
+    width: 100px;
+    left: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.groupForms{
+    display: flex;
+    padding-left: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3{
+    padding: 15px;
+    left: 2%;
+    position: relative;
+}

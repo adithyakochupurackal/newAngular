@@ -1,0 +1,112 @@
+
+<h1 style = "text-align: center">
+    This is from Data Component HTML file.<br><br>
+</h1>
+
+<!---------------------------Row 1---------------------------------------------------->
+
+<div class = "row">
+    <div class = "column" style = "background-color: #19BE2A;margin-left: 20px; border: 3px solid black; padding-left: 80px"> ProductId <div> {{productId}}</div></div>
+    <div class = "column" style = "background-color: #FE1717; border: 3px solid black; padding-left: 80px"> Description <div> {{desc}}</div></div>
+    <div class = "column" style = "background-color: #4D94F1; border: 3px solid black; padding-left: 80px"> Brand <div> {{brand}}</div></div>
+</div>
+
+<!-- 
+<div id="t1" class="containerTab" style="background:#19BE2A">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>ProductId</h2>
+    <p>{{productId}}</p>
+</div>
+
+<div id="t2" class="containerTab" style="display:none;background:#FE1717">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Description</h2>
+    <p>{{desc}}</p>
+</div> -->
+
+<!------------------------------------------------------------------------------>
+
+
+<!---------------------------Row 2----------------------------------------------->
+<div class = "row">
+    <div class = "column" style = "background-color: #19BE2A; margin-left: 20px; border: 3px solid black; padding-left: 80px"> Price <div> {{price}}</div></div>
+    <div class = "column" style = "background-color: #FE1717; border: 3px solid black; padding-left: 80px"> Available <div> {{isAvailable}}</div></div>
+    <div class = "column" style = "background-color: #4D94F1; border: 3px solid black; padding-left: 80px"> Quantity <div> {{availableQty}}</div></div>
+</div>
+<!-- 
+<div id="t3" class="containerTab" style="display:none;background:#4D94F1">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Brand</h2>
+    <p>{{brand}}</p>
+</div>
+
+<div id="t4" class="containerTab" style="display:none;background:#19BE2A">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Price</h2>
+    <p>{{price}}</p>
+</div> -->
+
+
+<!------------------------------------------------------------------------------------->
+
+
+
+<!-- 
+<div id="t5" class="containerTab" style="display:none;background:#FE1717">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Available</h2>
+    <p>{{isAvailable}}</p>
+</div>
+
+<div id="t6" class="containerTab" style="display:none;background:#4D94F1">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Quantity</h2>
+    <p>{{availableQty}}</p>
+</div> -->
+
+<!----------------------------------------------------------------------------------->
+
+<!-- 
+<p class = "products">
+    ProductId: {{productId}}<br>
+
+    Description: {{desc}}<br>
+
+    Brand: {{brand}}<br>
+
+    Price: {{price}}<br>
+
+    Available: {{isAvailable}}<br>
+
+    Qty: {{availableQty}}<br>
+</p> -->
+
+<div>
+    <h2 class = "Button">
+        <input text = "text" style = "text-align: center " name = "order" [(ngModel)] = "orderQty" /> <br>
+        <input text = "button" style = "background-color: #4D94F1; cursor: pointer; color: black; text-align: center" name = "SubmitButton" value = "Order" (click)="Order()" />
+    </h2>
+
+    <h3 class = "fsh">
+        Free Shipping<span [style.color] = "freeShipping" > <br>Hurray<br> Let's Goooooooo</span>
+    </h3>
+
+</div>
+<!--
+<div *ngFor="let product of products; index as i">
+    {{i}}
+    {{product.productId}}
+    {{product.desc}}
+    {{product.brand}}
+    {{product.availqty}}
+    {{product.price}}
+    {{product.freeshipping}}
+</div>-->
+
+<div *ngFor=" let product of productList">
+    {{product.prodId}}<br>
+    {{product.desc}}<br>
+    {{product.brand}}<br>
+    {{product.qty}}<br>
+    {{product.price}}
+</div>
